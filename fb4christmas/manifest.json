@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "FB4Christmas",
+  "description": "A Facebook theme (for christmas) with new background, menu, animation,..",
+  "version": "1.0",
+
+  "icons": {
+    "48": "fb-icon.png"
+  },
+
+  "permissions": [
+    "tabs", "<all_urls>","storage"
+  ],
+  "content_scripts": [
+   {
+    "matches": ["https://www.facebook.com/*"],
+    "css": ["mystyles.css"],
+    "js": ["myscript.js"]
+  }
+],
+  "browser_action": {
+    "default_icon": "fb-icon.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "chrismas.jpg"
+  ]
+}
